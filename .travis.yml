@@ -6,6 +6,5 @@ before_install:
     - docker build -t corona -f Dockerfile.dev .
 
 script:
-    - docker run corona npm run test -- --coverage
-    # - docker run -e CI=true USERNAME/docker-react npm run test
-    
+    # - docker run corona npm run test -- --coverage
+    - docker run -e CI=true corona npm run test
