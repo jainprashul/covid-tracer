@@ -31,7 +31,7 @@ const DashBoard = () => {
   let total = data && data.statewise['0']
   console.log(total);
 
-  const { active, confirmed, deaths, recovered, lastupdatedtime  } = total;
+  const { active, confirmed, deaths, recovered, lastupdatedtime, deltaconfirmed,deltadeaths,deltarecovered} = total;
 
   
 
@@ -40,7 +40,7 @@ const DashBoard = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Covid 19 India</IonTitle>
-          <IonBadge slot='end' color='light'>Last Updated &#13{lastupdatedtime}</IonBadge>
+          <IonBadge slot='end' color='light' class='lastupdate'>Last Updated <br/>{lastupdatedtime}</IonBadge>
         </IonToolbar>
       </IonHeader>
       <IonContent>
